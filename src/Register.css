@@ -1,0 +1,215 @@
+.register {
+  color: 20px;
+  margin-top: 1%;
+}
+
+.register__input {
+  width: 40%;
+  height: 60px;
+  margin-left: 33%;
+  margin-top: 2%;
+  background: transparent;
+  font-size: 19px;
+  text-indent: 0.75rem;
+  color: white;
+  box-shadow: 0 0 50px rgb(131, 131, 131);
+  transition: box-shadow 0.8s ease-in-out;
+  position: relative;
+  /* padding: 5px; */
+  display: block;
+}
+
+.register__label {
+  color: white;
+}
+.register__container {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  align-items: left;
+  justify-content: left;
+  transform: translate(-50%, -50%);
+}
+.register__header {
+  font-size: xx-large;
+  margin-left: 45%;
+
+  color: rgb(104, 252, 19);
+}
+.register__btn {
+  padding: 20px;
+  margin-left: 25%;
+  width: 15%;
+  background: transparent;
+  border-radius: 3px;
+  box-shadow: 0 10px 10px rgb(104, 252, 19);
+  cursor: pointer;
+  color: rgb(104, 252, 19);
+  font-weight: bolder;
+}
+
+.register__form {
+  margin-top: 10%;
+}
+
+.register__logo {
+  position: relative;
+  width: 20%;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.register__logo:hover {
+  cursor: grab;
+  transition: box-shadow 0.25s ease-in-out;
+}
+.register__img {
+  filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.register__input::-webkit-outer-spin-button,
+.register__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.register__input[placeholder]:focus {
+  color: rgb(104, 252, 19);
+}
+.register__input:focus,
+.register__btn:hover {
+  outline: none;
+  outline-color: green;
+  box-shadow: 2px 2px 2px 2px rgb(104, 252, 19);
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* basic stylings ------------------------------------------ */
+
+/* .container {
+  font-family: 'Roboto';
+  width: 400px;
+  margin: 30px auto 0;
+  display: block;
+  background: rgb(236, 234, 234);
+  padding: 10px 50px 50px;
+} */
+
+.group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+div > label {
+  color: rgb(201, 194, 194);
+  font-size: 18px;
+  text-align: center;
+  align-content: center;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 6px;
+  top: 10px;
+  margin-left: 33%;
+  transition: 0.1s ease all;
+  -moz-transition: 0.1s ease all;
+  -webkit-transition: 0.1s ease all;
+}
+
+/* active state */
+.register__input:focus ~ label,
+.register__input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #e6e8f0;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 40%;
+  margin-left: 33%;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  /* height: 2px; */
+  width: 0;
+  padding: 1px;
+  bottom: 0;
+  position: absolute;
+  background: #ffffff;
+  transition: 0.6s ease all;
+  -moz-transition: 0.6s ease all;
+  -webkit-transition: 0.6s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+.register__input:focus ~ .bar:before,
+.register__input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 80px;
+  top: 25%;
+  color: rgb(235, 226, 226);
+  margin-left: 100%;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+/* active state */
+.register__input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.1s ease-in;
+  -moz-animation: inputHighlighter 0.1s ease-in;
+  animation: inputHighlighter 0.1s ease-out;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #ecedf0;
+  }
+  to {
+    width: 10;
+    background: black;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #d6d8dd;
+  }
+  to {
+    width: 0;
+    background: black;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #dddee2;
+  }
+  to {
+    width: 0;
+    background: black;
+  }
+}

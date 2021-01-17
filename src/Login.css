@@ -1,0 +1,132 @@
+.login__container {
+  width: 300px;
+  height: fit-content;
+  flex-direction: column;
+  border-radius: 5px;
+
+  /* color: black;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 1;
+  left: 40%; */
+}
+
+.login__container > h2 {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 20px;
+  align-items: center;
+  color: lightgreen;
+}
+
+.login__container > form > h5 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.login__form {
+  z-index: 2;
+  height: 23rem;
+  width: 16rem;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: (0, 0, 0, 0.9);
+  box-shadow: 0 0px 14px 14px white;
+  color: white;
+  z-index: 1;
+}
+
+.login__container > .login__form > input {
+  height: 30px;
+  width: 70%;
+  margin-bottom: 10px;
+  background: transparent;
+  transition: box-shadow 0.5s ease-out;
+  border-color: green;
+  /*
+  border-color: rgb(0, 0, 0);
+  outline: none;
+  padding: 10px;
+  font-size: 17px;
+  text-indent: 0.75rem;
+  box-shadow: 0 0 1px black;
+  color: black;
+  border-radius: 10px;
+  position: relative; */
+}
+
+.butn {
+  margin-top: 20px;
+  background: transparent;
+  width: 30%;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgb(156, 154, 154);
+  cursor: pointer;
+  color: green;
+  font-weight: bolder;
+}
+.signup {
+  color: rgb(187, 164, 164);
+  background-image: linear-gradient(
+    to right,
+    rgb(108, 190, 108),
+    rgb(80, 172, 58),
+    rgb(108, 190, 108),
+    rgb(80, 172, 58)
+  );
+  margin-bottom: 10px;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.login__logo {
+  object-fit: contain;
+  width: 290px;
+  /* align-items: center;
+  align-content: center; */
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  /* position: fixed;
+  z-index: 1;
+  left: 40%; */
+}
+.login__container > .login__form > input[placeholder]:focus {
+  color: white;
+}
+.login__container > .login__form > input:focus,
+.butn:hover {
+  box-shadow: 0 0 20px rgb(179, 255, 160);
+}
+.signup:hover {
+  box-shadow: 0 0 10px rgb(179, 255, 160);
+}
+.login__vid {
+  filter: blur(9px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.login {
+  /* background-color: white; */
+  width: 10;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
